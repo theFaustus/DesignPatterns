@@ -10,6 +10,7 @@ import com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Race;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassinFactory;
+import com.isa.ipp.creationaldesignpatterns.builder_1.Protagonist;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.BlacksmithRace;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.Forge;
 import com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon;
@@ -35,6 +36,18 @@ public class GameOfThrones {
         assassinFactory.createAssassin();
         Forge.createBlacksmith(BlacksmithRace.ELF).forgeWeapons();
         Forge.createBlacksmith(BlacksmithRace.VALERYAN).forgeWeapons();
+        Protagonist firstProtagonist = new Protagonist.ProtagonistBuilder()
+                .setFirstName("John")
+                .setLastName("Snow")
+                .setAge(23)
+                .setGender("Male")
+                .build();
+        Protagonist secondProtagonist = new Protagonist.ProtagonistBuilder()
+                .setFirstName("Daenareys")
+                .setLastName("Targaryen")
+                .setAge(23)
+                .setGender("Female")
+                .build();
         DrogonDragon.INSTANCE.breathFire();
         RhaegalDragon.getInstance().breathFire();
         ViserionDragon.INSTANCE.breathFire();
