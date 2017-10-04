@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.singleton_1">
+  <ClassDiagramComponents>
+    <Class name="RhaegalDragon" package="com.isa.ipp.creationaldesignpatterns.singleton_1" visibility="public" xPosition="141.0" yPosition="79.0">
+      <Fields>
+        <Field name="INSTANCE" type="RhaegalDragon" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="RhaegalDragon" visibility="public" isStatic="true"/>
+        <Method name="breathFire" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="INSTANCE" source="com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon" target="com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon" target="com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
