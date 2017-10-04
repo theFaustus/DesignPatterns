@@ -10,6 +10,8 @@ import com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Race;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassinFactory;
+import com.isa.ipp.creationaldesignpatterns.factory_method_1.BlacksmithRace;
+import com.isa.ipp.creationaldesignpatterns.factory_method_1.Forge;
 import com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon;
 import com.isa.ipp.creationaldesignpatterns.singleton_3.DrogonDragon;
 import com.isa.ipp.creationaldesignpatterns.singleton_2.ViserionDragon;
@@ -31,6 +33,8 @@ public class GameOfThrones {
         assassinFactory.createAssassin();
         assassinFactory = new UnsulliedAssassinFactory();
         assassinFactory.createAssassin();
+        Forge.createBlacksmith(BlacksmithRace.ELF).forgeWeapons();
+        Forge.createBlacksmith(BlacksmithRace.VALERYAN).forgeWeapons();
         DrogonDragon.INSTANCE.breathFire();
         RhaegalDragon.getInstance().breathFire();
         ViserionDragon.INSTANCE.breathFire();
