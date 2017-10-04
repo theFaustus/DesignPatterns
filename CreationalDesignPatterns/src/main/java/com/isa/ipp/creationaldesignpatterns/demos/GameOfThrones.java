@@ -15,6 +15,10 @@ import com.isa.ipp.creationaldesignpatterns.builder_2.DirewolfAnimalBuilder;
 import com.isa.ipp.creationaldesignpatterns.builder_2.MysticForest;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.BlacksmithRace;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.Forge;
+import com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenCrystal;
+import com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral;
+import com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSpear;
+import com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSword;
 import com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon;
 import com.isa.ipp.creationaldesignpatterns.singleton_3.DrogonDragon;
 import com.isa.ipp.creationaldesignpatterns.singleton_2.ViserionDragon;
@@ -53,6 +57,9 @@ public class GameOfThrones {
                 .setAge(23)
                 .setGender("Female")
                 .build();
+        FrozenCrystal.addGeneral(new FrozenGeneralWithSpear());
+        FrozenCrystal.addGeneral(new FrozenGeneralWithSword());
+        FrozenGeneral frozenGeneral = FrozenCrystal.createGeneral("Frozen Spear General");
         DrogonDragon.INSTANCE.breathFire();
         RhaegalDragon.getInstance().breathFire();
         ViserionDragon.INSTANCE.breathFire();
