@@ -11,6 +11,8 @@ import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinF
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassinFactory;
 import com.isa.ipp.creationaldesignpatterns.builder_1.Protagonist;
+import com.isa.ipp.creationaldesignpatterns.builder_2.DirewolfAnimalBuilder;
+import com.isa.ipp.creationaldesignpatterns.builder_2.MysticForest;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.BlacksmithRace;
 import com.isa.ipp.creationaldesignpatterns.factory_method_1.Forge;
 import com.isa.ipp.creationaldesignpatterns.singleton_1.RhaegalDragon;
@@ -42,6 +44,9 @@ public class GameOfThrones {
                 .setAge(23)
                 .setGender("Male")
                 .build();
+        MysticForest forest = new MysticForest();
+        forest.setAnimalBuilder(new DirewolfAnimalBuilder());
+        forest.createMysticAnimal();
         Protagonist secondProtagonist = new Protagonist.ProtagonistBuilder()
                 .setFirstName("Daenareys")
                 .setLastName("Targaryen")
