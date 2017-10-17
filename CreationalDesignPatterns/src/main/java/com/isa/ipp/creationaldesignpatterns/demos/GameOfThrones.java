@@ -36,12 +36,14 @@ public class GameOfThrones {
         armyFactory = AbstractArmyFactory.getFactory(Race.WESTEROS);
         armyFactory.createHorses();
         armyFactory.createSoldiers();
+        
         AbstractAssassinFactory assassinFactory = new DothrakiAssassinFactory();
         assassinFactory.createAssassin();
         assassinFactory = new UnsulliedAssassinFactory();
         assassinFactory.createAssassin();
         Forge.createBlacksmith(BlacksmithRace.ELF).forgeWeapons();
         Forge.createBlacksmith(BlacksmithRace.VALERYAN).forgeWeapons();
+        
         Protagonist firstProtagonist = new Protagonist.ProtagonistBuilder()
                 .setFirstName("John")
                 .setLastName("Snow")
@@ -59,7 +61,9 @@ public class GameOfThrones {
                 .build();
         FrozenCrystal.addGeneral(new FrozenGeneralWithSpear());
         FrozenCrystal.addGeneral(new FrozenGeneralWithSword());
+        
         FrozenGeneral frozenGeneral = FrozenCrystal.createGeneral("Frozen Spear General");
+        
         DrogonDragon.INSTANCE.breathFire();
         RhaegalDragon.getInstance().breathFire();
         ViserionDragon.INSTANCE.breathFire();

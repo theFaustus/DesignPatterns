@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.prototype_1">
+  <ClassDiagramComponents>
+    <Class name="FrozenCrystal" package="com.isa.ipp.creationaldesignpatterns.prototype_1" visibility="public" xPosition="327.0" yPosition="57.0">
+      <Fields>
+        <Field name="generals" type="List&lt;FrozenGeneral&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addGeneral" returnType="void" visibility="public" isStatic="true">
+          <Argument type="FrozenGeneral" name="g"/>
+        </Method>
+        <Method name="createGeneral" returnType="FrozenGeneral" visibility="public" isStatic="true">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrozenGeneralWithSpear" package="com.isa.ipp.creationaldesignpatterns.prototype_1" visibility="public" xPosition="710.0" yPosition="160.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="clone" returnType="FrozenGeneral" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FrozenGeneralWithSword" package="com.isa.ipp.creationaldesignpatterns.prototype_1" visibility="public" xPosition="707.0" yPosition="336.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="clone" returnType="FrozenGeneral" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="FrozenGeneral" package="com.isa.ipp.creationaldesignpatterns.prototype_1" visibility="public" xPosition="399.0" yPosition="366.0">
+      <Methods>
+        <Method name="clone" returnType="FrozenGeneral" visibility="package"/>
+        <Method name="getName" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenCrystal" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSword" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral"/>
+    <HasRelation name="generals" source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenCrystal" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;FrozenGeneral&gt;"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSword" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSpear" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneralWithSpear" target="com.isa.ipp.creationaldesignpatterns.prototype_1.FrozenGeneral" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

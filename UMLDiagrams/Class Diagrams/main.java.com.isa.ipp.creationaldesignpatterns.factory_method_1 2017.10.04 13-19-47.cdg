@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.factory_method_1">
+  <ClassDiagramComponents>
+    <Class name="ElfBlacksmith" package="com.isa.ipp.creationaldesignpatterns.factory_method_1" visibility="public" xPosition="380.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="forgeWeapons" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Forge" package="com.isa.ipp.creationaldesignpatterns.factory_method_1" visibility="public" xPosition="72.0" yPosition="393.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBlacksmith" returnType="Blacksmith" visibility="public" isStatic="true">
+          <Argument type="BlacksmithRace" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ValeryianBlacksmith" package="com.isa.ipp.creationaldesignpatterns.factory_method_1" visibility="public" xPosition="380.0" yPosition="184.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="forgeWeapons" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Blacksmith" package="com.isa.ipp.creationaldesignpatterns.factory_method_1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="forgeWeapons" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Enum name="BlacksmithRace" package="com.isa.ipp.creationaldesignpatterns.factory_method_1" visibility="public" xPosition="38.0" yPosition="253.0">
+      <Literals>
+        <Literal name="VALERYAN"/>
+        <Literal name="ELF"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.factory_method_1.Forge" target="com.isa.ipp.creationaldesignpatterns.factory_method_1.BlacksmithRace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.creationaldesignpatterns.factory_method_1.ElfBlacksmith" target="com.isa.ipp.creationaldesignpatterns.factory_method_1.Blacksmith"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.creationaldesignpatterns.factory_method_1.ValeryianBlacksmith" target="com.isa.ipp.creationaldesignpatterns.factory_method_1.Blacksmith"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

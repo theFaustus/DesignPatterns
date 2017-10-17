@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.abstract_factory_2">
+  <ClassDiagramComponents>
+    <Class name="AbstractAssassinFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="43.0" yPosition="109.0">
+      <Fields>
+        <Field name="prototype" type="Assassin" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="createAssassin" returnType="Assassin" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Assassin" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="328.0" yPosition="109.0">
+      <Fields>
+        <Field name="credo" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="credo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="clone" returnType="Assassin" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="DothrakiAssassin" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="623.0" yPosition="206.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="clone" returnType="Assassin" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="DothrakiAssassinFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="70.0" yPosition="327.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="UnsulliedAssassin" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="623.0" yPosition="35.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="clone" returnType="Assassin" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="UnsulliedAssassinFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_2" visibility="public" xPosition="301.0" yPosition="327.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="prototype" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassin" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassinFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassin" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassin" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.UnsulliedAssassinFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.AbstractAssassinFactory"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.DothrakiAssassin" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_2.Assassin"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

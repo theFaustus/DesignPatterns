@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.abstract_factory_1">
+  <ClassDiagramComponents>
+    <Class name="AbstractArmyFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" isAbstract="true" xPosition="7.0" yPosition="172.0">
+      <Fields>
+        <Field name="WESTEROS_LAND" type="WesterosArmyFactory" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="FROZEN_LAND" type="FrozenArmyFactory" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getFactory" returnType="AbstractArmyFactory" visibility="public" isStatic="true">
+          <Argument type="Race" name="race"/>
+        </Method>
+        <Method name="createHorses" returnType="List&lt;Horse&gt;" visibility="public" isAbstract="true"/>
+        <Method name="createSoldiers" returnType="List&lt;Soldier&gt;" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="FrozenArmyFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="381.0" yPosition="111.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createHorses" returnType="List&lt;Horse&gt;" visibility="public"/>
+        <Method name="createSoldiers" returnType="List&lt;Soldier&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FrozenHorse" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="849.0" yPosition="149.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="FrozenSoldier" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="849.0" yPosition="259.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Horse" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" isAbstract="true" xPosition="622.0" yPosition="111.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Soldier" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" isAbstract="true" xPosition="622.0" yPosition="280.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="WesterosArmyFactory" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="381.0" yPosition="270.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createHorses" returnType="List&lt;Horse&gt;" visibility="public"/>
+        <Method name="createSoldiers" returnType="List&lt;Soldier&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="WesterosHorse" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="849.0" yPosition="42.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="WesterosSoldier" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="849.0" yPosition="380.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="Race" package="com.isa.ipp.creationaldesignpatterns.abstract_factory_1" visibility="public" xPosition="62.0" yPosition="39.0">
+      <Literals>
+        <Literal name="WESTEROS"/>
+        <Literal name="FROZEN"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Soldier" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Soldier" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="WESTEROS_LAND" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosArmyFactory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenHorse" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Horse"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Horse" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosSoldier" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Soldier"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Horse" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Horse" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Race" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.WesterosHorse" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Horse"/>
+    <HasRelation name="FROZEN_LAND" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenArmyFactory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.FrozenSoldier" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Soldier"/>
+    <UseRelation source="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.AbstractArmyFactory" target="com.isa.ipp.creationaldesignpatterns.abstract_factory_1.Soldier" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
