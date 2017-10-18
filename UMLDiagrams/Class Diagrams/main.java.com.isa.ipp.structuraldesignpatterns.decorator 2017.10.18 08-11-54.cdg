@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.decorator">
+  <ClassDiagramComponents>
+    <Class name="CompressedStream" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" xPosition="145.0" yPosition="247.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stream" name="stream"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="write" returnType="void" visibility="public"/>
+        <Method name="read" returnType="void" visibility="public"/>
+        <Method name="compress" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Decorator" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" isAbstract="true" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="stream" type="Stream" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stream" name="stream"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="read" returnType="void" visibility="public"/>
+        <Method name="write" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" xPosition="23.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EncryptedStream" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" xPosition="403.0" yPosition="247.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stream" name="stream"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="write" returnType="void" visibility="public"/>
+        <Method name="read" returnType="void" visibility="public"/>
+        <Method name="encrypt" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FileStream" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" xPosition="636.0" yPosition="210.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="void" visibility="public"/>
+        <Method name="write" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Stream" package="com.isa.ipp.structuraldesignpatterns.decorator" visibility="public" xPosition="636.0" yPosition="20.0">
+      <Methods>
+        <Method name="read" returnType="void" visibility="package"/>
+        <Method name="write" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.structuraldesignpatterns.decorator.Decorator" target="com.isa.ipp.structuraldesignpatterns.decorator.Stream"/>
+    <HasRelation name="stream" source="com.isa.ipp.structuraldesignpatterns.decorator.Decorator" target="com.isa.ipp.structuraldesignpatterns.decorator.Stream" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.decorator.EncryptedStream" target="com.isa.ipp.structuraldesignpatterns.decorator.Decorator"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.decorator.CompressedStream" target="com.isa.ipp.structuraldesignpatterns.decorator.Decorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.isa.ipp.structuraldesignpatterns.decorator.FileStream" target="com.isa.ipp.structuraldesignpatterns.decorator.Stream"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

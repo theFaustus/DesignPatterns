@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.flyweight">
+  <ClassDiagramComponents>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="ROWS" type="int" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Factory" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="pool" type="Item[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="howManyRows"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFlyweight" returnType="Item" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Item" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="row" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="row"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="print" returnType="void" visibility="public">
+          <Argument type="int" name="col"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.structuraldesignpatterns.flyweight.Factory" target="com.isa.ipp.structuraldesignpatterns.flyweight.Item" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

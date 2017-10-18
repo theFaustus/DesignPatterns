@@ -18,12 +18,12 @@ public class MyList<T> {
     
     public void add(T item){
         list.add(item);
-        System.out.println("com.isa.ipp.structuraldesignpatterns.proxy.MyList.add()");
+        System.out.println("com.isa.ipp.structuraldesignpatterns.composite_proxy.MyList.add()");
     }
     
     public void remove(T item){
         list.remove(item);
-        System.out.println("com.isa.ipp.structuraldesignpatterns.proxy.MyList.remove()");
+        System.out.println("com.isa.ipp.structuraldesignpatterns.composite_proxy.MyList.remove()");
     }
 
     @Override

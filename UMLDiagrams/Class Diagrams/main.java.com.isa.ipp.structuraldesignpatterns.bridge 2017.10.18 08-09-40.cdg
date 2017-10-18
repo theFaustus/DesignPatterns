@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.bridge">
+  <ClassDiagramComponents>
+    <Class name="Bmp" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="init" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Image" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" isAbstract="true" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="platform" type="Platform" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPlatform" returnType="Platform" visibility="public"/>
+        <Method name="setPlatform" returnType="void" visibility="public">
+          <Argument type="Platform" name="platform"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="MacOs" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Platform" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Png" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="init" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Windows" package="com.isa.ipp.structuraldesignpatterns.bridge" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.structuraldesignpatterns.bridge.Image" target="com.isa.ipp.structuraldesignpatterns.bridge.Platform" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.bridge.Bmp" target="com.isa.ipp.structuraldesignpatterns.bridge.Image"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.bridge.MacOs" target="com.isa.ipp.structuraldesignpatterns.bridge.Platform"/>
+    <HasRelation name="platform" source="com.isa.ipp.structuraldesignpatterns.bridge.Image" target="com.isa.ipp.structuraldesignpatterns.bridge.Platform" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.bridge.Png" target="com.isa.ipp.structuraldesignpatterns.bridge.Image"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.bridge.Windows" target="com.isa.ipp.structuraldesignpatterns.bridge.Platform"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

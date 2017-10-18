@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.proxy">
+  <ClassDiagramComponents>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="20.0" yPosition="138.0">
+      <Fields>
+        <Field name="list" type="List&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ThreadSafeList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="195.0" yPosition="138.0">
+      <Fields>
+        <Field name="list" type="MyList&lt;T&gt;" visibility="private"/>
+        <Field name="monitor" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

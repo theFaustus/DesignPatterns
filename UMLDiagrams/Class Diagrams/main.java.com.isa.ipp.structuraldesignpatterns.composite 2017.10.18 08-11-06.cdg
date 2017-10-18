@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.composite">
+  <ClassDiagramComponents>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="File" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" isAbstract="true" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+        <Field name="attributes" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="attributes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Folder" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="files" type="List&lt;File&gt;" visibility="private"/>
+        <Field name="encryption" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="encryption"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="attributes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addFile" returnType="void" visibility="public">
+          <Argument type="File" name="f"/>
+        </Method>
+        <Method name="removeFile" returnType="void" visibility="public">
+          <Argument type="File" name="f"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PDF" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="version" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="version"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="attributes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="files" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;File&gt;"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.composite.PDF" target="com.isa.ipp.structuraldesignpatterns.composite.File"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

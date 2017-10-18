@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.structuraldesignpatterns.adapter">
+  <ClassDiagramComponents>
+    <Class name="AACAdapter" package="com.isa.ipp.structuraldesignpatterns.adapter" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="decoder" type="AACDecoder" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="decode" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AACDecoder" package="com.isa.ipp.structuraldesignpatterns.adapter" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="decodeStream" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Demo" package="com.isa.ipp.structuraldesignpatterns.adapter" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="PlayAAC" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Plugin" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Plugin" package="com.isa.ipp.structuraldesignpatterns.adapter" visibility="public" isAbstract="true" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="decode" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="WMAPlugin" package="com.isa.ipp.structuraldesignpatterns.adapter" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="decode" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.isa.ipp.structuraldesignpatterns.adapter.Demo" target="com.isa.ipp.structuraldesignpatterns.adapter.Plugin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="decoder" source="com.isa.ipp.structuraldesignpatterns.adapter.AACAdapter" target="com.isa.ipp.structuraldesignpatterns.adapter.AACDecoder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.adapter.AACAdapter" target="com.isa.ipp.structuraldesignpatterns.adapter.Plugin"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.adapter.WMAPlugin" target="com.isa.ipp.structuraldesignpatterns.adapter.Plugin"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
