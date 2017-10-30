@@ -11,7 +11,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="MyList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="MyList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="251.0" yPosition="20.0">
       <Fields>
         <Field name="list" type="List&lt;T&gt;" visibility="private"/>
       </Fields>
@@ -25,7 +25,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ThreadSafeList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="ThreadSafeList" package="com.isa.ipp.structuraldesignpatterns.proxy" visibility="public" xPosition="444.0" yPosition="20.0">
       <Fields>
         <Field name="list" type="MyList&lt;T&gt;" visibility="private"/>
         <Field name="monitor" type="Object" visibility="private"/>

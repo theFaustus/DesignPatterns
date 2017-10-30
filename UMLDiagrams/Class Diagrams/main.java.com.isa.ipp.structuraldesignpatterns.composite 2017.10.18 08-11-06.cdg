@@ -11,7 +11,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="File" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" isAbstract="true" xPosition="320.0" yPosition="20.0">
+    <Class name="File" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" isAbstract="true" xPosition="252.0" yPosition="20.0">
       <Fields>
         <Field name="name" type="String" visibility="protected"/>
         <Field name="attributes" type="String" visibility="protected"/>
@@ -26,7 +26,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Folder" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Folder" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="196.0" yPosition="254.0">
       <Fields>
         <Field name="files" type="List&lt;File&gt;" visibility="private"/>
         <Field name="encryption" type="String" visibility="private"/>
@@ -48,7 +48,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="PDF" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="PDF" package="com.isa.ipp.structuraldesignpatterns.composite" visibility="public" xPosition="529.0" yPosition="20.0">
       <Fields>
         <Field name="version" type="String" visibility="private"/>
       </Fields>
@@ -65,9 +65,9 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="files" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;File&gt;"/>
-    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File"/>
     <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.composite.PDF" target="com.isa.ipp.structuraldesignpatterns.composite.File"/>
+    <IsRelation name="is" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File"/>
+    <HasRelation name="files" source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;File&gt;"/>
+    <UseRelation source="com.isa.ipp.structuraldesignpatterns.composite.Folder" target="com.isa.ipp.structuraldesignpatterns.composite.File" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

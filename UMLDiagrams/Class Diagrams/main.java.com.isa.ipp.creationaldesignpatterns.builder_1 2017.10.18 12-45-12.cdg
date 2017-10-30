@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.isa.ipp.creationaldesignpatterns.builder_1">
+  <ClassDiagramComponents>
+    <Class name="Protagonist" package="com.isa.ipp.creationaldesignpatterns.builder_1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="firstName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="gender" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private">
+          <Argument type="ProtagonistBuilder" name="b"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFirstName" returnType="String" visibility="public"/>
+        <Method name="setFirstName" returnType="void" visibility="public">
+          <Argument type="String" name="firstName"/>
+        </Method>
+        <Method name="getLastName" returnType="String" visibility="public"/>
+        <Method name="setLastName" returnType="void" visibility="public">
+          <Argument type="String" name="lastName"/>
+        </Method>
+        <Method name="getGender" returnType="String" visibility="public"/>
+        <Method name="setGender" returnType="void" visibility="public">
+          <Argument type="String" name="gender"/>
+        </Method>
+        <Method name="getAge" returnType="int" visibility="public"/>
+        <Method name="setAge" returnType="void" visibility="public">
+          <Argument type="int" name="age"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -13,7 +13,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Factory" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Factory" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="231.0" yPosition="20.0">
       <Fields>
         <Field name="pool" type="Item[]" visibility="private"/>
       </Fields>
@@ -28,7 +28,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Item" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Item" package="com.isa.ipp.structuraldesignpatterns.flyweight" visibility="public" xPosition="242.0" yPosition="215.0">
       <Fields>
         <Field name="row" type="int" visibility="private"/>
       </Fields>

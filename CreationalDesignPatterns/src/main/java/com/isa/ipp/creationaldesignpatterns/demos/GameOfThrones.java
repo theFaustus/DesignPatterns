@@ -50,16 +50,17 @@ public class GameOfThrones {
                 .setAge(23)
                 .setGender("Male")
                 .build();
+        
         MysticForest forest = new MysticForest();
         forest.setAnimalBuilder(new DirewolfAnimalBuilder());
         forest.createMysticAnimal();
+        
         Protagonist secondProtagonist = new Protagonist.ProtagonistBuilder()
                 .setFirstName("Daenareys")
                 .setLastName("Targaryen")
                 .setAge(23)
                 .setGender("Female")
                 .build();
-        FrozenCrystal.addGeneral(new FrozenGeneralWithSpear());
         FrozenCrystal.addGeneral(new FrozenGeneralWithSword());
         
         FrozenGeneral frozenGeneral = FrozenCrystal.createGeneral("Frozen Spear General");
