@@ -15,10 +15,10 @@ public class Demo {
         TwoDimensionalGraph twoDimensionalGraph = new TwoDimensionalGraph();
         ThreeDimensionalGraph threeDimensionalGraph = new ThreeDimensionalGraph();
 
-        Report r = new Report();
-        r.addObserver(twoDimensionalGraph);
-        r.addObserver(threeDimensionalGraph);
-        r.setData("X=1,Y=2");
+        Report report = new Report();
+        report.addObserver(twoDimensionalGraph);
+        report.addObserver(threeDimensionalGraph);
+        report.setData("X=1,Y=2");
 
     }
 }
