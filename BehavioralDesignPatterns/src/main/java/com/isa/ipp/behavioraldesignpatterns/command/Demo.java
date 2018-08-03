@@ -11,9 +11,9 @@ package com.isa.ipp.behavioraldesignpatterns.command;
  */
 public class Demo {
     public static void main(String[] args) {
-        Player p = new Player();
+        Player player = new Player();
         Widget w = new Widget();
-        w.setListener(new PlayMusicCommand(p));
+        w.setListener(new PlayMusicCommand(player));
         w.clickPlayButton();
     }
 }
